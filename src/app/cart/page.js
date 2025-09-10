@@ -71,7 +71,8 @@ export default function CartPage() {
             <h3 className="text-2xl font-bold text-gray-800">
               Total: <span className="text-yellow-700">₹{total}</span>
             </h3>
-            <button className="mt-4 bg-green-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-green-600 transition">
+            <button onClick={() => { alert('development Under Progress. please wait for checkout'); }}
+             className="mt-4 bg-green-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-green-600 transition">
               Checkout
             </button>
           </div>

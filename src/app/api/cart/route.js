@@ -1,14 +1,13 @@
 import dbConnect from "@/lib/mongodb";
 import Cart from "@/models/Cart";
 
-// GET /cart → get all items
 export async function GET() {
   await dbConnect();
   const cart = await Cart.find({ userId: "guest" }).populate("productId");
   return Response.json(cart);
 }
 
-// POST /cart → add product
+
 export async function POST(req) {
   await dbConnect();
   const { userId, productId, quantity } = await req.json();
@@ -24,7 +23,7 @@ export async function POST(req) {
   return Response.json(cartItem);
 }
 
-// DELETE /cart → remove item
+
 export async function DELETE(req) {
   await dbConnect();
   const { cartId } = await req.json();

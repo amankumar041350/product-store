@@ -16,7 +16,7 @@ export default function ProductsPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId: "guest", productId: id, quantity: 1 }),
     });
-    alert("✅ Added to cart!");
+    alert(" Added to cart succussfully");
   };
 
   return (
